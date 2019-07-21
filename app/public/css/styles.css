@@ -6,8 +6,8 @@
   margin-left: auto;
   margin-right: auto;
 }
-.body {
-  background: #e4ebf1;
+body {
+  background-color: red;
 }
 hr {
   border-color: inherit;
