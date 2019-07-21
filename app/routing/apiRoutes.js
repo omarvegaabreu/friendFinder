@@ -1,4 +1,4 @@
-const friends = require("../data/friends");
+let friends = require("../data/friends");
 
 module.exports = app => {
   app.get("/api/friends", (req, res) => {
@@ -6,19 +6,19 @@ module.exports = app => {
   });
 
   app.post("/api/friends", (req, res) => {
-    const totalDifference = 0;
+    let totalDifference = 0;
 
-    const bestMatch = {
+    let bestMatch = {
       name: "",
       photo: "",
       friendDifference: 1000
     };
 
-    const userData = req.body;
-    const userName = userData.name;
+    let userData = req.body;
+    let userName = userData.name;
     let userScores = userData.scores;
 
-    const b = userScores.map(item => {
+    let b = userScores.map(item => {
       return parseInt(item, 10);
     });
     userData = {
@@ -30,7 +30,7 @@ module.exports = app => {
     console.log("Name: " + userName);
     console.log("User Score " + userScores);
 
-    const sum = b.reduce((a, b) => a + b, 0);
+    let sum = b.reduce((a, b) => a + b, 0);
 
     console.log("Sum of users score " + sum);
     console.log("Best match friend diff " + bestMatch.friendDifference);
@@ -45,7 +45,7 @@ module.exports = app => {
 
       console.log("Best match friend diff " + bestMatch.friendDifference);
 
-      const bfriendScore = friends[i].scores.reduce((a, b) => a + b, 0);
+      let bfriendScore = friends[i].scores.reduce((a, b) => a + b, 0);
 
       console.log("Total friend score " + bfriendScore);
 
