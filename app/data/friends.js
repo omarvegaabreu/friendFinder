@@ -1,40 +1,45 @@
-const friends = [
+var friends = [
   {
-    name: `Marcos Almeida`,
+    name: "Tom Hardy",
     photo:
-      "https://www.egjjf.com/wp-content/uploads/2018/10/Alex-Pannain-0075_2015_RICKSON_JJGF_2015IMG_4672201201.jpg",
-    score: [5, 1, 4, 4, 5, 1, 2, 5, 4, 4]
+      "https://m.media-amazon.com/images/M/MV5BMTQ3ODEyNjA4Nl5BMl5BanBnXkFtZTgwMTE4ODMyMjE@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
+    scores: [5, 1, 4, 4, 5, 1, 2, 5, 4, 4]
   },
   {
-    name: `Roberto "Cyborg" Abreu`,
+    name: "Jamie Dornan",
     photo:
-      "https://cdn.shopify.com/s/files/1/1800/2299/files/77d0b07dc6debd3f525bf946c2a9a960_large.jpg?v=1544303172",
-    score: [5, 1, 4, 4, 5, 1, 2, 5, 4, 4]
+      "https://www.usmagazine.com/wp-content/uploads/2018/02/jamie-dornan-nude.jpg",
+    scores: [4, 2, 5, 1, 3, 2, 2, 1, 3, 2]
   },
   {
-    name: `Marcelo Garcia`,
+    name: "Anthony Joshua",
     photo:
-      "https://upload.wikimedia.org/wikipedia/commons/5/5c/Marcelo_garcia.jpg",
-    score: [5, 1, 4, 4, 5, 1, 2, 5, 4, 4]
+      "https://m.media-amazon.com/images/M/MV5BYWFlMmVhZjAtOGMzNS00MzEyLTkzMWEtN2M1MDgzODI5Njk0XkEyXkFqcGdeQXVyNTI5NjIyMw@@._V1_.jpg",
+    scores: [5, 2, 2, 2, 4, 1, 3, 2, 5, 5]
   },
   {
-    name: `Renzo Gracie`,
+    name: "Henry Cavill",
     photo:
-      "https://static1.squarespace.com/static/5a57d5e1268b962ed07665bb/t/5a59778ae4966bd4a50b5cc3/1516673336292/renzo_portrait+%281%29.jpg?format=1000w",
-    score: [5, 1, 4, 4, 5, 1, 2, 5, 4, 4]
+      "https://m.media-amazon.com/images/M/MV5BMTUxNTExMzUzOF5BMl5BanBnXkFtZTgwOTI1MjA3OTE@._V1_.jpg",
+    scores: [3, 3, 4, 2, 2, 1, 3, 2, 2, 3]
   },
   {
-    name: `Lucas Leite`,
+    name: "Emily Ratajowski",
     photo:
-      "https://www.bjjheroes.com/wp-content/uploads/2014/07/Lucas-Leite.jpg",
-    score: [5, 1, 4, 4, 5, 1, 2, 5, 4, 4]
+      "https://pmchollywoodlife.files.wordpress.com/2014/10/Emily-Ratajkowski-Reveals-Rock-Hard-Abs-In-Teeny-Crop-Top-While-Vacationing-With-Husband-gallery.jpg",
+    scores: [4, 3, 4, 1, 5, 2, 5, 3, 1, 4]
   },
   {
-    name: `Joao Gabriel Rocha`,
+    name: "Blake Lively",
     photo:
-      "https://www.bjjheroes.com/wp-content/uploads/2014/07/Joao-Gabriel-Rocha.jpg",
-    score: [5, 1, 4, 4, 5, 1, 2, 5, 4, 4]
+      "https://media.vanityfair.com/photos/560c07690404673e0de66e1d/master/w_960,c_limit/blake-lively-end-of-preserve-01.jpg",
+    scores: [4, 3, 4, 2, 4, 3, 5, 3, 5, 4]
+  },
+  {
+    name: "Kate Upton",
+    photo:
+      "https://m.media-amazon.com/images/M/MV5BMTk3MTA2ODQ1MF5BMl5BanBnXkFtZTcwMjkwMDYxNw@@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
+    scores: [4, 4, 2, 3, 2, 2, 3, 2, 4, 5]
   }
 ];
-
 module.exports = friends;

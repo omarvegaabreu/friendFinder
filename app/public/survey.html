@@ -34,19 +34,20 @@
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <div class="Mntitle"><h1>Meet your Match</h1></div>
+        <div class="Mntitle"><h1>Meet Your Forever</h1></div>
         <hr />
         <h2 class="Mntitle">
           Then find the one with the greatest compatibility!
         </h2>
       </div>
 
-      <h2>Questions</h2>
+      <h2>Survey Questions</h2>
       <hr />
       <h3><strong>About You</strong></h3>
       <h4>Name (Required)</h4>
@@ -89,7 +90,7 @@
       </select>
 
       <h3><strong>Question 4</strong></h3>
-      <h4>I like half Guard</h4>
+      <h4>I like animals</h4>
       <select data-placeholder="" class="chosen-select" id="q4">
         <option value=""></option>
         <option value="1" selected>1 (Strongly Disagree)</option>
@@ -100,7 +101,7 @@
       </select>
 
       <h3><strong>Question 5</strong></h3>
-      <h4>I like to pull guard</h4>
+      <h4>I like to go Camping</h4>
       <select data-placeholder="" class="chosen-select" id="q5">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -111,7 +112,7 @@
       </select>
 
       <h3><strong>Question 6</strong></h3>
-      <h4>How often do you get a submission?</h4>
+      <h4>How often do you follow through on what you say you will do?</h4>
       <select data-placeholder="" class="chosen-select" id="q6">
         <option value=""></option>
         <option value="1">1 (No Camping)</option>
@@ -122,7 +123,7 @@
       </select>
 
       <h3><strong>Question 7</strong></h3>
-      <h4>I want a training buddy</h4>
+      <h4>I want a party buddy</h4>
       <select data-placeholder="" class="chosen-select" id="q7">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -133,7 +134,7 @@
       </select>
 
       <h3><strong>Question 8</strong></h3>
-      <h4>I eat Acai before I go have fun</h4>
+      <h4>I complete my responsibilities before I go have fun</h4>
       <select data-placeholder="" class="chosen-select" id="q8">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -179,13 +180,16 @@
       <footer class="footer text-center">
         <div class="container">
           <p>
-            <a href="https://omarvegaabreu.github.io/boostrapPortfolio/"
-              >Omar Vega</a
+            <a
+              href="https://omarvegaabreu.github.io/boostrapPortfolio/"
+              target="_blank"
+            >
+              Omar Vega</a
             >
             |
-            <a href="https://github.com/omarvegaabreu/friendFinder"></a>
-            <i class="fab fa-github"></i><a> GitHub Repo</a>
-
+            <a href="https://github.com/omarvegaabreu" target="_blank"
+              ><i class="fab fa-github left"></i> GitHub Repo</a
+            >
             <br />
           </p>
         </div>
@@ -217,6 +221,48 @@
         </div>
       </div>
     </div>
-    <script src="./javaScript/survey.js"></script>
+
+    <script type="text/javascript">
+      $("#submit").on("click", function() {
+        function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") isValid = false;
+          });
+          $(".chosen-select").each(function() {
+            if ($(this).val() === "") isValid = false;
+          });
+          return isValid;
+        }
+        if (validateForm() == true) {
+          var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+              $("#q1").val(),
+              $("#q2").val(),
+              $("#q3").val(),
+              $("#q4").val(),
+              $("#q5").val(),
+              $("#q6").val(),
+              $("#q7").val(),
+              $("#q8").val(),
+              $("#q9").val(),
+              $("#q10").val()
+            ]
+          };
+          var currentURL = window.location.origin;
+          $.post(currentURL + "/api/friends", userData, function(data) {
+            $("#matchName").text(data.name);
+            $("#matchImg").attr("src", data.photo);
+
+            $("#resultsModal").modal("toggle");
+          });
+        } else {
+          alert("Please fill out all fields before submitting!");
+        }
+        return false;
+      });
+    </script>
   </body>
 </html>
