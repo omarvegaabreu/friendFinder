@@ -17,6 +17,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 /**Routes */
 app.use(express.static("app/public"));
 
+// //Route to public folder for serving static files
+app.use(express.static(__dirname + "./app/public/css/style.css"));
+app.use(express.static(__dirname + "/app/public/images/kendoujyou001.jpg"));
+
 /**Require routes */
 require("./app/routing/api-routes")(app);
 require("./app/routing/html-routes")(app);
