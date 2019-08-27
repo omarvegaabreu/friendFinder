@@ -1,56 +1,21 @@
 # FriendFinder
 
-Instructions
+The application uses HTML,CSS, Express and Node JS.
 
-Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
+URL : https://afternoon-brushlands-71373.herokuapp.com/survey
 
-Your server.js file should require the basic npm packages we've used in class: express and path.
+Description
 
-Your htmlRoutes.js file should include two routes:
+This is a survey should has 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question. The application will match you with your best match in competitive BJJ also render some giphy's from UFC fighters.
 
-A GET Route to /survey which should display the survey page.
-A default, catch-all route that leads to home.html which displays the home page.
+Dependencies used:
+"body-parser": "^1.19.0",
+"express": "^4.17.1"
 
-Your apiRoutes.js file should contain two routes:
+Note: You can visit the link above to view the deployed application in heroku.
 
-A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
-A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+\*\*\* To run the application after you download it.
 
-You should save your application's data inside of app/data/friends.js as an array of objects. Each of these objects should roughly follow the format below.
-
-{
-"name":"Omar",
-"photo":"https://thespinoff.co.nz/wp-content/uploads/2018/01/friendsfeature.jpg",
-"scores":[
-5,
-1,
-4,
-4,
-5,
-1,
-2,
-5,
-4,
-1
-]
-}
-
-Determine the user's most compatible friend using the following as a guide:
-
-Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
-With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
-
-Example:
-
-User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
-
-User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
-
-Total Difference: 2 + 1 + 2 = 5
-
-Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both 5-3 and 3-5 as 2, and so on.
-The closest match will be the user with the least amount of difference.
-
-Once you've found the current user's most compatible friend, display the result as a modal pop-up.
-
-The modal should display both the name and picture of the closest match.
+1. In the command line type: npm init -y
+2. In the command line type:npm i to install all dependencies.
+3. In the command line type: node server.js
