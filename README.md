@@ -4,7 +4,7 @@ Creator: Omar Vega
 Type of project: Node/Express . JS server.
 
 The application uses HTML,CSS, Express and Node JS.
-![Results](friendFinder\app\public\images\friendfinderhome.PNG)
+![](friendfinderhome.PNG)
 
 URL : https://afternoon-brushlands-71373.herokuapp.com/survey
 
