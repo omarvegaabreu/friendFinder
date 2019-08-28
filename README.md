@@ -1,6 +1,7 @@
 # FriendFinder
 
 The application uses HTML,CSS, Express and Node JS.
+![Results](app\public\images\friendfinderhome.PNG)
 
 URL : https://afternoon-brushlands-71373.herokuapp.com/survey
 
@@ -19,3 +20,16 @@ Note: You can visit the link above to view the deployed application in heroku.
 1. In the command line type: npm init -y
 2. In the command line type:npm i to install all dependencies.
 3. In the command line type: node server.js
+
+###Technologies Used
+-HTML
+-Bootstrap
+-Font Awesome
+-Collect Library
+-Javascript
+-JQuery
+-Git
+-GitHub
+-Heroku
+-Node Pacakages installed:
+-Express, Path
