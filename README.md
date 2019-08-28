@@ -1,5 +1,8 @@
 # FriendFinder
 
+Creator: Omar Vega
+Type of project: Node/Express . JS server.
+
 The application uses HTML,CSS, Express and Node JS.
 ![Results](app\public\images\friendfinderhome.PNG)
 
@@ -9,7 +12,7 @@ Description
 
 This is a survey should has 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question. The application will match you with your best match in competitive BJJ also render some giphy's from UFC fighters.
 
-Dependencies used:
+NPM Dependencies used:
 "body-parser": "^1.19.0",
 "express": "^4.17.1"
 
@@ -31,5 +34,4 @@ Note: You can visit the link above to view the deployed application in heroku.
 -Git
 -GitHub
 -Heroku
--Node Pacakages installed:
--Express, Path
+-Express, Pat
